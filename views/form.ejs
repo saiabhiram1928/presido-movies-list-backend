@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie - JustWatch</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white">
+    <%- include ('navbar.ejs') %>
+
+    <div class=" flex items-center justify-center border-2">
+        <div class="border-2 w-full md:w-1/2 bg-black p-8 rounded shadow-md">
+            <form action="<%= movie ? `/update/${movie.id}` : '/' %>"method="post" >
+                <div class="mb-4 ">
+                    <label for="name" class="block text-lg font-medium text-gray-300">Name of the Movie:</label>
+                    <input type="text" id="name" name="name" value="<%= movie ? movie.name : '' %>"
+                        class="mt-1 py-2 bg-black block w-full rounded-md border-white border-2 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" required>
+                </div> 
+                <div class="block text-lg font-medium text-gray-300 ">Genre: </div>
+                <div class="w-full mt-2">
+                    <div class="mt-2 ml-5 space-y-2 grid md:grid-cols-2 pl-2">  
+                        <div class="flex items-center ">
+                            <input id="action" name="genere[]"  <%= movie && movie.genere.includes("Action") ? 'checked' : '' %> type="checkbox" value="Action" class="focus:ring-indigo-500 h-4 w-4 text-indigo-300 border-gray-300 rounded" required>
+                            <label for="action" class="ml-2 block text-sm text-gray-200" >Action</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input required id="adventure" name="genere[]" type="checkbox"   <%= movie && movie.genere.includes("Adventure") ? 'checked' : '' %>  value="Adventure" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="adventure" class="ml-2 block text-sm text-gray-300" >Adventure</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input required id="action" name="genere[]" type="checkbox"  <%= movie && movie.genere.includes("Thriller") ? 'checked' : '' %> value="Action"  class="focus:ring-indigo-500 h-4 w-4 text-indigo-300 border-gray-300 rounded">
+                            <label for="action" class="ml-2 block text-sm text-gray-200" >Thriller</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input required id="adventure" name="genere[]"  <%= movie && movie.genere.includes("Crime") ? 'checked' : '' %> type="checkbox" value="Adventure" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="adventure" class="ml-2 block text-sm text-gray-300" >Crime</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input required="adventure" name="genere[]"  <%= movie && movie.genere.includes("Sci-Fi") ? 'checked' : '' %> type="checkbox" value="Adventure" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="adventure" class="ml-2 block text-sm text-gray-300" >Sci-Fi</label>
+                        </div>
+                        <!-- Add more checkboxes for other genres -->
+                    </div>
+                </div>
+                <div class="block text-lg font-medium text-gray-300 mt-2">Language: </div>
+                <div class="w-full ">
+                    <div class="mt-2 ml-5 space-y-2 grid md:grid-cols-2 pl-2">
+                        <div class="flex items-center">
+                            <input id="english" name="language[]"  <%= movie && movie.language.includes("English") ? 'checked' : '' %> type="checkbox" value="English" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
+                            <label for="english" class="ml-2 block text-sm text-gray-300">English</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="hindi" name="language[]"<%= movie && movie.language.includes("Hindi") ? 'checked' : '' %> type="checkbox" value="Hindi" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
+                            <label for="hindi" class="ml-2 block text-sm text-gray-300">Hindi</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="telugu" name="language[]" <%= movie && movie.language.includes("Telugu") ? 'checked' : '' %> type="checkbox" value="Telugu" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" required>
+                            <label for="telugu" class="ml-2 block text-sm text-gray-300">Telugu</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="tamil" name="language[]" type="checkbox" <%= movie && movie.language.includes("Tamil") ? 'checked' : '' %> value="Tamil" 
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"   required>
+                            <label for="tamil" class="ml-2 block text-sm text-gray-300">Tamil</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-4 mt-5">
+                    <div class="w-full md:w-1/2 px-4 mb-4">
+                        <label for="director" class="block text-lg font-medium text-gray-300">Director:</label>
+                        <input type="text" value="<%= movie ? movie.director : '' %>" id="director" name="director"
+                            class="mt-1 py-2 bg-black block w-full rounded-md border-white border-2 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" required>
+                    </div>
+                    <div class="w-full md:w-1/2 px-4 mb-4">
+                        <label for="release-year" class="block text-lg font-medium text-gray-300">Release Year:</label>
+                        <input type="number" value="<%= movie ? movie.release_year : '' %>" id="release-year" min="1980" name="release_year"
+                            class="mt-1 py-2 bg-black block w-full rounded-md border-white border-2 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="rating" class="block text-lg font-medium text-gray-300">Rating:</label>
+                    <input type="number" value="<%= movie ? movie.rating : '' %>" id="rating" name="rating" min="0" max="10" step="0.1"
+                        class="mt-1 py-2 bg-black block w-full rounded-md border-white border-2 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200">
+                    <p class="text-sm text-gray-400" required>Enter a rating between 0 and 10</p>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="description" class="block text-lg font-medium text-gray-300">Description:</label>
+                    <textarea required  id="description" name="description" maxlength="150"
+                        class="mt-1 py-2 bg-black block w-full rounded-md border-white border-2 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 resize-none">
+                        <%= movie ? movie.description : '' %>
+                    </textarea>
+                    <p class="text-sm mt-1 text-gray-400">Maximum 150 words</p>
+                </div>
+                
+                <div class="flex justify-end">
+                    <button type="submit"
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Submit</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </>
+</body>
+
+
+</html>

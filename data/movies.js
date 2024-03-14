@@ -1,102 +1,5 @@
 [
   {
-    "id": 2,
-    "name": "Inception",
-    "description": "A thief who enters the dreams of others to steal their secrets must now perform an inception, planting an idea into the mind of a CEO.",
-    "genere": [
-      "Action",
-      "Adventure",
-      "Sci-Fi"
-    ],
-    "director": "Christopher Nolan",
-    "release_year": "2010",
-    "language": [
-      "English"
-    ],
-    "rating": 8.8
-  },
-  {
-    "id": 3,
-    "name": "The Shawshank Redemption",
-    "description": "wo imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-    "genere": [
-      "Drama"
-    ],
-    "director": "Frank Darabont",
-    "release_year": "1994",
-    "language": [
-      "English"
-    ],
-    "rating": 9.3
-  },
-  {
-    "id": 4,
-    "name": "The Godfather",
-    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-    "genere": [
-      "Crime",
-      " Drama"
-    ],
-    "director": "Francis Ford Coppola",
-    "release_year": "1972",
-    "language": [
-      "English"
-    ],
-    "rating": 9.2
-  },
-  {
-    "id": 5,
-    "name": "The Godfather: Part II",
-    "description": "The sequel to The Godfather, this film follows the parallel storylines of the early life of Vito Corleone, who established his crime family in the early 20th century, and his son Michael Corleone, who expands and solidifies the family's power in the 1950s",
-    "genere": [
-      "Crime",
-      "Drama"
-    ],
-    "director": "Francis Ford Coppola",
-    "release_year": "1974",
-    "language": [
-      "English",
-      "Italian",
-      "Spanish",
-      "Latin"
-    ],
-    "rating": 9
-  },
-  {
-    "id": 6,
-    "name": "Baahubali: The Beginning",
-    "description": "An epic fantasy film that follows the journey of a young man named Shivudu, who learns about his past and his destiny as he embarks on a quest to rescue a kidnapped princess.",
-    "genere": [
-      "Action",
-      "Drama"
-    ],
-    "director": "S.S. Rajamouli",
-    "release_year": "2015",
-    "language": [
-      "English",
-      "Hindi",
-      "Telugu",
-      "Tamil"
-    ],
-    "rating": 8.4
-  },
-  {
-    "id": 7,
-    "name": "Spirited Away",
-    "description": " An animated fantasy film about a young girl who discovers a mysterious world of spirits and must navigate its dangers to rescue her parents.",
-    "genere": [
-      "Drama",
-      "Anime"
-    ],
-    "director": "Hayao Miyazaki",
-    "release_year": "2001",
-    "language": [
-      "English",
-      "Japanese"
-    ],
-    "rating": 7.4
-  },
-  {
     "id": 8,
     "name": "Avengers: Endgame",
     "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more to undo Thanos' actions and restore order to the universe",
@@ -105,10 +8,13 @@
       "Adventure",
       "Sci-Fi"
     ],
+    "images": "./images/avengers.jpg",
     "director": "Anthony Russo, Joe Russo",
     "release_year": "2019",
-    "language": "English",
-    "rating": 8.4
+    "language": [
+      "English"
+    ],
+    "rating": "8.4"
   },
   {
     "id": 9,
@@ -119,12 +25,13 @@
       "Thriller",
       "Horror"
     ],
+    "images": "./images/avengers.jpg",
     "director": "Sriram Raghavan",
     "release_year": "2018",
     "language": [
       "Hindi"
     ],
-    "rating": 8.4
+    "rating": "8.4"
   },
   {
     "id": 10,
@@ -135,12 +42,13 @@
       "Thriller",
       "Horror"
     ],
+    "images": "./images/avengers.jpg",
     "director": "Sriram Raghavan",
     "release_year": "2018",
     "language": [
       "Hindi"
     ],
-    "rating": 8.4
+    "rating": "8.4"
   },
   {
     "id": 1710334639040,
@@ -151,12 +59,13 @@
       "Adventure",
       "Sci-Fi"
     ],
+    "images": "./images/avengers.jpg",
     "director": "abhiram",
     "release_year": "2025",
     "language": [
       "Telugu"
     ],
-    "rating": 8.4
+    "rating": "8.4"
   },
   {
     "id": 1710335479106,
@@ -167,11 +76,238 @@
       "Adventure",
       "Sci-Fi"
     ],
+    "images": "./images/avengers.jpg",
     "director": "abhiram",
     "release_year": "2025",
     "language": [
       "Telugu"
     ],
-    "rating": 8.4
+    "rating": "8.4"
+  },
+  {
+    "id": 1710428600803,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428648582,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428665391,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428717061,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428842115,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428964297,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710428991965,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710429028683,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710430101311,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710430249088,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710430450861,
+    "name": "abhiram",
+    "description": "fadsfdasfafs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "8.1"
+  },
+  {
+    "id": 1710430794256,
+    "name": "sai",
+    "description": "sadfasdf",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1990",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "1"
+  },
+  {
+    "id": 1710431764819,
+    "name": "gaami",
+    "description": "asfdasdfdfs",
+    "genere": [
+      "Action",
+      "Adventure"
+    ],
+    "director": "ab",
+    "release_year": "1980",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "rating": "2"
+  },
+  {
+    "id": 1710445363947,
+    "name": "salaar",
+    "description": "  It about the  story of two friends            ",
+    "genere": [
+      "Action",
+      "Action"
+    ],
+    "director": "Prashanth neel",
+    "release_year": "2023",
+    "language": [
+      "English",
+      "Hindi",
+      "Telugu",
+      "Tamil"
+    ],
+    "rating": "8"
   }
 ]

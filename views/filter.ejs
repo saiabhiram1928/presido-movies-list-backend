@@ -1,0 +1,58 @@
+<section  class="py-10 bg-gray-800">
+    <div class="container mx-auto px-5 ">
+        <h2 class="text-2xl font-semibold mb-4">Filters</h2>
+        <form method="post" action = '/filter'>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div>
+                <label class="block mb-2">Filter by Director:</label>
+                <input type="text" name="director" class="w-full px-2 py-1 bg-gray-700 rounded">
+            </div>
+            <div class="border border-gray-600 rounded-md p-4">
+                <label class="block mb-2">Filter by Release Year:</label>
+                <div class="relative">
+                    <input type="range" name="release_year" id="release-year-slider" min="1980" value="1980" max="2024" step="1" class="w-full bg-gray-700 rounded" />
+                    <div class="text-center mt-2" id="slider-value"></div>
+                </div>
+            </div>
+            
+            <div>
+                <label class="block mb-2">Filter by Language:</label>
+                <!-- Select dropdown for languages -->
+                <div class="w-full ">
+                    <div class="mt-2 ml-5 space-y-2 grid md:grid-cols-2 pl-2">
+                        <div class="flex items-center">
+                            <input id="english" name="language[]"   type="checkbox" value="English" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="english" class="ml-2 block text-sm text-gray-300">English</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="hindi" name="language[]" type="checkbox" value="Hindi" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="hindi" class="ml-2 block text-sm text-gray-300">Hindi</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="telugu" name="language[]"  type="checkbox" value="Telugu" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="telugu" class="ml-2 block text-sm text-gray-300">Telugu</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input id="tamil" name="language[]" type="checkbox"  value="Tamil" 
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                            <label for="tamil" class="ml-2 block text-sm text-gray-300">Tamil</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-gray-600 rounded-md p-4">
+                <label class="block mb-2">Filter by Rating:</label>
+                <div class="relative">
+                    <input type="range" name="rating" id="rating-slider" min="0" value="0" max="10" step="1" class="w-full bg-gray-700 rounded" />
+                    <div class="text-center mt-2 text-lg" id="rating-value"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Apply and Reset Buttons -->
+        <div class="mt-4 flex justify-end">
+            <button id="filter-form" type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Apply</button>
+            <button id="reset-button" class="bg-gray-500 text-white mx-5 px-4 py-2 rounded">Reset</button>
+        </div>
+        </form>
+    </div>
+</section>

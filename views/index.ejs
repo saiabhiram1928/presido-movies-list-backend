@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List Website</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+
+  <%- include ('navbar.ejs') %>
+
+
+
+    <!-- Filter Section -->
+    <%- include ('filter.ejs') %>
+
+    <!-- Movie List Section -->
+    <%- include ('movie_list.ejs') %>
+</body>
+<script>
+  const slider = document.getElementById("release-year-slider");
+    const sliderValue = document.getElementById("slider-value");
+    const resetButton = document.getElementById("reset-button");
+
+    // Update value text below the slider when slider value changes
+    slider.addEventListener("input", function() {
+        sliderValue.textContent = this.value;
+    });
+
+    const ratingSlider = document.getElementById("rating-slider");
+    const ratingValue = document.getElementById("rating-value");
+    ratingSlider.addEventListener("input", function() {
+        ratingValue.textContent = this.value;
+    });
+    // Reset slider position and deselect it on reset button click
+    resetButton.addEventListener("click", function(e) {
+        e.preventDefault()
+        slider.value = '0';
+        ratingSlider.value='0'
+        slider.blur();
+        sliderValue.textContent = ''
+        ratingValue.innerText = '';
+         // Reset value text
+    });
+    const filterForm = document.getElementById("filter-form");
+
+    // Event listener for form submission
+    filterForm.addEventListener("click", function(event) {
+
+        // Retrieve the selected values
+        const releaseYear = document.getElementById("release-year-slider").value;
+        const rating = document.getElementById("rating-slider").value;
+
+    });
+    const updateMovie =(movieId)=> {
+        window.location.href = `/update/${movieId}`;
+    }
+    const deleteMovie =(movieId)=> {
+        window.location.href = `/delete/${movieId}`;
+    }
+
+
+    
+</script>
+
+</html>

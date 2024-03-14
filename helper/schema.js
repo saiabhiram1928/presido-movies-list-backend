@@ -1,5 +1,7 @@
 const moviesSchema = (req,res , next)=>{
+    console.log(req.body)
     const {name, description, genere , director , release_year, language,rating}  = req.body
+    req.body.id = Date.now()
     if (!name || typeof name !== 'string' || name.trim().length === 0) {
         return res.status(400).json({ error: 'Name is required and must be a non-empty string' });
     }else if(!description || typeof description !== 'string' || description.trim().length === 0){
@@ -12,7 +14,7 @@ const moviesSchema = (req,res , next)=>{
         return res.status(400).json({ error: 'release_year is required and must be a non-empty string'});
     }else if(!language || !Array.isArray(language) || language.length === 0){
         return res.status(400).json({ error: 'language is required and must be an array'});
-    }else if(!rating ||typeof rating !== 'number'  || rating === 0){
+    }else if(!rating ||typeof rating !== 'string'  || rating === 0){
         return res.status(400).json({ error: 'rating is required and must be a non-empty string'});
     }else{
         next()

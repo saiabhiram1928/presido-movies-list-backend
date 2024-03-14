@@ -7,16 +7,16 @@ const fs =require('fs')
 const app =express()
 dotenv.config();
 const port = process.env.PORT || 5000;
-
+app.set('view engine', 'ejs');
+app.set('views', './views')
+app.use('/images', express.static('./data/images'));
 app.use(cors())
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-    res.send("Movies server");
-  });
   
-app.use('/movies', require('./routes/movies'))
+app.use('/', require('./routes/movies'))
 
 const server = app.listen(port, () => {
     console.log(`Server is Runnig at port:${port}`);
