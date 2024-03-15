@@ -27,7 +27,7 @@ const addMovie =async (req, res)=>{
         const moviesdata =  eval(await fs.promises.readFile('./data/movies.js','utf8'))
         moviesdata.push(newMovie)
         eval(await fs.promises.writeFile('./data/movies.js', JSON.stringify(moviesdata,null,2) , 'utf8'))
-        res.status(200).redirect('/')
+        res.status(200).render('error',{error:"Movie Added sucessfully"})
     } catch (error) {
         console.log(`Error in reading file ${error}`)
         res.status(500).render('error',{ error: 'Failed to post data to file' })
@@ -48,7 +48,7 @@ const updateMovie = async (req,res)=>{
         }
         moviesdata[index] = { ...moviesdata[index], ...req.body };
         eval(await fs.promises.writeFile('./data/movies.js', JSON.stringify(moviesdata,null,2) , 'utf8'))
-        res.status(200).redirect('/')
+        res.status(200).render('error',{error:"Movie Updated sucessfully"})
     }catch(error){
         console.log(error)
         res.status(500).json({error:"Failed to update the details"})
@@ -66,7 +66,7 @@ const deleteMovie = async (req, res) => {
            return movie.id !=  id
         })
         eval(await fs.promises.writeFile('./data/movies.js', JSON.stringify(data,null,2) , 'utf8'))
-        res.status(200).redirect('/')
+        res.status(200).render('error',{error:"Movie delted sucessfully"})
         
 
     }catch(error){
