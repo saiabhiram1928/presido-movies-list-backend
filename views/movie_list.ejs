@@ -1,4 +1,4 @@
-<section class="py-10">
+<section class="py-10 mx-2">
     <div class="container mx-auto">
         <h2 class="text-2xl font-semibold mb-4">Movies</h2>
         <% if (movies.length > 0) { %>
@@ -7,25 +7,26 @@
                 <% movies.map(function(movie,index) { %>
                     <div class="p-4 border-2 w-full">
                         <div class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-                            <p  class="flex-shrink-0 rounded-lg "> <%= index+1 %> </p>
+                            <p  class="flex-shrink-0 rounded-lg">Rating: <%=  movie.rating %> / 10 </p>
                             <div class="flex-grow sm:pl-8">
-                                <h2 class="title-font font-medium text-2xl text-gray-400"><%= movie.name %> (<%= movie.release_year %>) </h2>
-                                <p class="m-4 text-ellipsis"><%= movie.description.length > 150 ? movie.description.slice(0, 100) + "..." : movie.description %></p>
-                                <div class="flex flex-wrap m-5">
+                                <h2 class="title-font font-medium text-2xl text-gray-400"><%= movie.name %> (<%= movie.release_year %>)  </h2>
+                                <p class="mt-5">Directed by <%= movie.director  %></p>
+                                <p class="my-4 text-ellipsis"><%= movie.description.length > 150 ? movie.description.slice(0, 100) + "..." : movie.description %></p>
+                                <div class="flex flex-wrap my-5">
                                     <!-- Loop of genres -->
                                     <% movie.genere.map(function(genre) { %>
                                         <span class="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-400 mr-2">#<%= genre %></span>
                                     <% }); %>
                                 </div>
-                                <div class="flex flex-wrap m-5">
+                                <div class="flex flex-wrap my-5">
                                     <!-- Loop of languages -->
                                     <% movie.language.map(function(lang) { %>
                                         <span class="inline-block bg-yellow-400 rounded-full px-3 py-1 text-sm font-semibold text-black mr-2"><%= lang %></span>
                                     <% }); %>
                                 </div>
                                 <div class="flex justify-evenly items-center">
-                                    <button class="text-white bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2" onclick="updateMovie('<%= movie.id %>')">Update Movie</button>
-                                    <button class="text-white bg-gray-800 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2" onclick="deleteMovie('<%= movie.id %>')" >Delete Movie</button>
+                                    <button class="text-white bg-blue-500 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2" onclick="updateMovie('<%= movie.id %>')">Update Movie</button>
+                                    <button class="text-white bg-red-500 hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5 py-2.5 me-2 mb-2" onclick="deleteMovie('<%= movie.id %>')" >Delete Movie</button>
                                 </div>
                               
                                 

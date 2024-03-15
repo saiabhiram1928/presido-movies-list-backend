@@ -12,16 +12,14 @@
 
 <body class="bg-gray-900 text-white">
   <!-- Navbar -->
-
   <%- include ('navbar.ejs') %>
-
-
 
     <!-- Filter Section -->
     <%- include ('filter.ejs') %>
 
     <!-- Movie List Section -->
     <%- include ('movie_list.ejs') %>
+    
 </body>
 <script>
   const slider = document.getElementById("release-year-slider");
@@ -46,7 +44,7 @@
         slider.blur();
         sliderValue.textContent = ''
         ratingValue.innerText = '';
-         // Reset value text
+        window.location.href='/'
     });
     const filterForm = document.getElementById("filter-form");
 

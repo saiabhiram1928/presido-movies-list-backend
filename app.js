@@ -9,7 +9,6 @@ dotenv.config();
 const port = process.env.PORT || 5000;
 app.set('view engine', 'ejs');
 app.set('views', './views')
-app.use('/images', express.static('./data/images'));
 app.use(cors())
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
